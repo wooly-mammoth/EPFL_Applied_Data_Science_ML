@@ -1,0 +1,30 @@
+
+Data set from "Ames, Iowa: Alternative to the Boston Housing Data as an
+End of Semester Regression Project" by Dean De Cock - https://ww2.amstat.org/publications/jse/v19n3/decock.pdf
+
+Data documentation: https://ww2.amstat.org/publications/jse/v19n3/decock/DataDocumentation.txt
+
+
+
+drop the columns ['Fence', 'Alley', 'Misc Feature', 'Pool QC'] 
+raw['Lot Frontage'] = raw['Lot Frontage'].fillna(np.nanmedian(raw['Lot Frontage'])) - bestimmte werteß
+raw['Mas Vnr Area'] = raw['Mas Vnr Area'].fillna(0)
+raw['Mas Vnr Type'] = raw['Mas Vnr Type'].fillna('None')
+
+raw[['Bsmt Qual', 'Bsmt Cond', 'Bsmt Exposure', 'BsmtFin Type 1', 'BsmtFin Type 2']] = raw[['Bsmt Qual', 'Bsmt Cond', 'Bsmt Exposure', 'BsmtFin Type 1', 'BsmtFin Type 2']].fillna('NA')
+
+raw['Bsmt Full Bath'] = raw['Bsmt Full Bath'].fillna(0)
+raw['Bsmt Half Bath'] = raw['Bsmt Half Bath'].fillna(0)
+
+raw['Electrical'] = raw['Electrical'].fillna('SBrkr')
+raw['Gr Liv Area'] = raw['Gr Liv Area'].fillna(1440)
+
+(Garage Area = 0.0).
+raw['Garage Type'] = raw['Garage Type'].fillna('NA')
+raw['Garage Finish'] = raw['Garage Finish'].fillna('NA')
+raw['Garage Qual'] = raw['Garage Qual'].fillna('NA')
+raw['Garage Cond'] = raw['Garage Cond'].fillna('NA')
+raw['Garage Cars'] = raw['Garage Cars'].fillna(0)
+raw['Garage Area'] = raw['Garage Area'].fillna(0)
+raw['Garage Yr Blt'] = raw['Garage Yr Blt'].fillna(0)
+raw['Fireplace Qu'] = raw['Fireplace Qu'].fillna('NA')
